@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h2>{{ user|capfirst }}, Thank you for your answer! You already sent you sentimental level!</h2>
+    <p>Come back tomorrow and try again!</p>
+
+    <h2>Results of the team</h2>
+    <p>...</p>
+
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% endblock %}
