@@ -1,0 +1,14 @@
+
+
+
+
+
+sudo docker build -t django-test -f deploy/Dockerfile .
+
+sudo docker run -d --name django-test-survey -p 9000:9000 --restart=always django-test
+
+
+
+Admin Credentials for Django Applications
+USER="admin"
+PASS="@d1g1t123"
