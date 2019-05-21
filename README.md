@@ -17,8 +17,8 @@ To run this simple Django application you will need:
 ## Install
 1. Clone this project into your pc
 2. Go to this directory ".../django-test/"
-3. Run the command to build the image to our Docker ```/bin/bash sudo docker build -t django-test -f deploy/Dockerfile . ```
-4. After, Run the command to run our container ```/bin/bash sudo docker run -d --name django-test-survey -p 9000:9000 --restart=always django-test```
+3. Run the command to build the image to our Docker ```sudo docker build -t django-test -f deploy/Dockerfile . ```
+4. After, Run the command to run our container ```sudo docker run -d --name django-test-survey -p 9000:9000 --restart=always django-test```
 
 ## Default credentials
 There is an admin account created to this application.
