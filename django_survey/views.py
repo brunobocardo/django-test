@@ -17,7 +17,7 @@ class ResultSentimental(FormView):
     def get(self, request, *args, **kwargs):
         try:
             if len(list(HappinessLevel.objects.values())) == 0:
-                
+
                 responses = {'answers': None,
                              'happiness_avg': 'N/A',
                              'report': True}
