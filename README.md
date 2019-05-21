@@ -34,8 +34,9 @@ To use this application, admin user needs to create new users and teams
 To start use this application:
 1. Go to http://localhost:9000/admin/
 2. In the section ``` AUTHENTICATION AND AUTHORIZATION ```, click on Add an User and input username and password, after click on save.
-3. After create an user, go to section ``` DJANGO_SURVEY ```, click on Add a Group to create a Team, input the name and click on save.
-4. Last step is add the user created into User profiles, click on Add User profiles, select an user and a group and click on save. ***The group is not required***
+3. After create an user, go to back to Django admin page, and go to section ``` DJANGO_SURVEY ```, click on Add a Group to create a Team, input the name and click on save.
+4. Last step is add the user created into User profiles, go to back to Django admin page, click on Add User profiles, select an user and a group and click on save. ***The group is not required***
+5. The users now can login and answer the question.
 
 ## Points to improve
 * Create a series historical about the happiness of the team for the last 3 months.
