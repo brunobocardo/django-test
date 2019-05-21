@@ -20,7 +20,7 @@ class Group(models.Model):
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     group_id = models.ForeignKey(Group, null=True, blank=True, on_delete=models.SET_NULL)
 
     def __str__(self):

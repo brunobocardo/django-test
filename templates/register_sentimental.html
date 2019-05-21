@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Tell me about your day!{% endblock %}
+
+{% block title_image %}
+    <h2>{{ request.user.username|capfirst }}, What is your level of Happiness today?</h2>
+{% endblock %}
+
+{% block content %}
+  <form method="post" class="login100-form validate-form">
+      {% csrf_token %}
+      <div class="form" style="margin-left:20%">
+        {{ form.as_p }}
+      </div>
+      <div>&nbsp;</div>
+      <div class="container-login100-form-btn" style="margin-left: 17%; margin-top: 20px;">
+          <button class="login100-form-btn" type="submit">
+              Submit
+        </button>
+      </div>
+  </form>
+{% endblock %}

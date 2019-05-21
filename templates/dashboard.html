@@ -1,13 +1,29 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}What about your day?{% endblock %}
+
+{% block title_image %}
+    {% if report == True %}
+            <h2>{{ request.user.username|capfirst }}, See the Team's Statistics</h2>
+    {% else %}
+            <h2>{{ request.user.username|capfirst }}, Thank you for your answer!</h2>
+    {% endif %}
+{% endblock %}
 
 {% block content %}
-    <h2>{{ user|capfirst }}, Thank you for your answer! You already sent you sentimental level!</h2>
-    <p>Come back tomorrow and try again!</p>
+<h4 style="text-align: center; margin-top:10px;">Your's Team Statistics</h4>
+<p style="text-align: center; margin-top:10px;">Happiness Average of your team is: <strong>{{ happiness_avg }}</strong></p>
 
-    <h2>Results of the team</h2>
-    <p>...</p>
+<div style="text-align: center; margin-top:10px; margin-bottom:10px;">
+{% for item in answers %}
+    <p>{{ item.happiness_level }}: &nbsp; {{ item.count_people }} People </p>
+{% endfor %}
+</div>
 
-  <p><a href="{% url 'logout' %}">logout</a></p>
+
+<div style="text-align: right; margin-top:10px; margin-bottom:10px; margin-right:10px;">
+<p><a href="{% url 'logout' %}">logout</a></p>
+</div>
+
+
 {% endblock %}
